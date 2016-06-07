@@ -1,0 +1,218 @@
+@font-face {
+    /* import font "Londrina-Shadow" from folder */
+    font-family: Londrina-Shadow;
+    src: url(../fonts/LondrinaShadow-Regular.ttf);
+}
+@font-face {
+    /* import font "Cabin Sketch" from folder */
+    font-family: CabinSketch;
+    src: url(../fonts/CabinSketch-Bold.ttf);
+}
+* {
+    /* apply font Cabin Sketch to all elements*/
+    font-family: "CabinSketch";
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    /* apply font familty Londrina Shadow, fontweight bold and color to all heading elements*/
+    font-family: "Londrina-Shadow";
+    font-weight: bold;
+    color: #f41971;
+}
+/* if screen size is < 767 px set various fonts sizes and header height*/
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 72px;
+    }
+    h2 {
+        font-size: 54px;
+    }
+    .slider-for a {
+        font-size: 72px;
+    }
+    .header-height {
+        height: 160px;
+    }
+    li {
+        font-size: 18px;
+    }
+}
+/* if screen size is > 767 and < 991px set various fonts sizes and header height*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+    h1 {
+        font-size: 84px;
+    }
+    h2 {
+        font-size: 72px;
+    }
+    .slider-for a {
+        font-size: 48px;
+    }
+    li {
+        font-size: 20px;
+    }
+    .header-height {
+        height: 200px;
+    }
+}
+/* if screen size is > 992px and < 1200 px set various fonts sizes and header height*/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    h1 {
+        font-size: 96px;
+    }
+    h2 {
+        font-size: 72px;
+    }
+    .slider-for a {
+        font-size: 40px;
+    }
+    li {
+        font-size: 24px;
+    }
+    .nav {
+        font-size: 20px;
+    }
+    .header-height {
+        height: 240px;
+    }
+}
+/* if screen size is > 1200px set various fonts sizes and header height*/
+
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 108px;
+    }
+    h2 {
+        font-size: 96px;
+    }
+    .slider-for a {
+        font-size: 48px;
+    }
+    li {
+        font-size: 28px;
+    }
+    .nav {
+        font-size: 24px;
+    }
+    .header-height {
+        height: 240px;
+    }
+}
+.slick-prev {
+    /* hide previous button from carousel */
+    visibility: hidden;
+}
+.slick-next {
+    /* hide next button from carousel */
+    visibility: hidden;
+}
+/* add background to header, make it take the whole space and make it sutomatically resize*/
+
+.header-banner-background {
+    background-image: url("../images/header-banner-5.png");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+/* get rid of the border which bootstrap headers have by default*/
+
+.page-header {
+    border: none;
+}
+/*apply background to all bg-2 classed elements, and make the background reponsive*/
+
+.bg-2 {
+    background-image: url(../images/Body-background-7.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 100px;
+}
+/* set bg-3 background color to yellow*/
+
+.bg-3 {
+    background-color: #ffe000;
+}
+/*position footer at the very bottom of the page, set the height to 100px and the backgroung color to yellow*/
+
+footer {
+    height: 100px;
+    background-color: #ffe000;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+/* make logo image responsive to header size*/
+
+img.header-image {
+    display: block;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* make page-header size fill its parent */
+
+.page-header {
+    height: 100%;
+    margin-top: 0;
+}
+/* make html element 100% so that all child elements will be laid out preperly, and so the footer will go to the bottom*/
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+/* give all the images 15px of padding and make them responsive*/
+
+img {
+    max-width: 100%;
+    height: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* format h3 to have 15px padding and center position*/
+
+h3 {
+    padding-left: 15px;
+    text-align: center;
+}
+/* create a hover effect when links are hovered on*/
+
+a {
+    color: #f41971;
+    font-family: "Londrina Shadow";
+    padding-left: 15px;
+    font-weight: bold;
+}
+ul.nav li a,
+ul.nav li a:hover,
+ul.nav li a:focus {
+    font-family: "CabinSketch";
+    text-decoration: none;
+}
+.slider-for a:hover,
+a:focus {
+    text-decoration: none;
+    color: #ff67a3;
+}
+.slick-slide,
+.page-header {
+    transition: all .2s ease-in-out;
+}
+.slick-slide:hover,
+.page-header:hover {
+    transform: scale(1.02);
+}
